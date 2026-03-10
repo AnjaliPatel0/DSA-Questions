@@ -1,5 +1,7 @@
 #include<iostream>
 using namespace std;
+
+// input 37 output 6.01;
 long long int SqrtInteger(int n){
     if(n == 0 || n == 1) return n;
     int s=0;
