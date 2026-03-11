@@ -18,7 +18,7 @@ int main(){
     for(int i:last){
         cout<<i<<" ";
     }cout<<endl;
-
+    // size means how many elemnts
     //capacity is a memory use
     cout<<"Capacity -> "<<v.capacity()<<endl;
 
