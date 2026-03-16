@@ -24,4 +24,16 @@ int main(){
     cout<<"2nd "<<sizeof(&temp)<<endl;
     int *ptr=&temp[0];
     cout<<sizeof(ptr)<<endl;
+
+
+    // int a[20]={1,2,3};
+    // cout<<"-> "<<&a[0]<<endl;
+    // int *p=&a[0];
+    // cout<<"-> "<<&p<<endl;
+
+    int a[10];
+    int *p=&a[0];
+    cout<<p<<endl;
+    p=p+1;
+    cout<<p<<endl;
 }
