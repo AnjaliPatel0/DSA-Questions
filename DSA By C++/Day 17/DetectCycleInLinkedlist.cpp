@@ -106,6 +106,33 @@ Node* floydDetectLoop(Node* head){
     }
     return NULL;
 }
+
+Node* getStartingNode( Node* head){
+       if(head==NULL){
+        return NULL;
+       }
+      Node* intersecction=floydDetectLoop(head);
+      Node* slow= head;
+      
+      while(slow!=intersecction){
+        slow=slow->next;
+        intersecction=intersecction->next;
+      }
+      return slow;
+}
+
+void removeLoop(Node* head){
+    if(head==NULL){
+        return;
+    }
+
+    Node* startofLoop=getStartingNode(head);
+    Node* temp =startofLoop;
+    while(temp->next!=startofLoop){
+        temp=temp->next;
+    }
+    temp->next=NULL;
+}
 int main(){
     Node* tail= NULL;
    insertNode(tail,5,3);
@@ -134,4 +161,11 @@ int main(){
   }else{
     cout<<"Loop is not present "<<endl;
   }
+
+  Node* loop=getStartingNode(tail);
+  cout<<"LOOP starts at "<<loop->data<<endl;
+
+  removeLoop(tail);
+  print(tail);
+
 }
