@@ -58,7 +58,13 @@ void print(Node* &head){
      }cout<<endl;
 }
 Node* solve(Node* first ,Node* second){
-   Node* curr1=first;
+    //if only one element is present in firsst list
+    if(first->next==NULL){
+        first->next=second;
+        return first;
+    }
+  
+    Node* curr1=first;
    Node* next1=curr1->next;
    Node* curr2=second;
    Node* next2=curr2->next;
@@ -122,9 +128,5 @@ int main(){
     Node* ans = merge2sortedlist(first, second);
 
     cout << "Merged list: ";
-    print(ans);
-
-
-   
-    
+    print(ans);  
 }
