@@ -71,5 +71,6 @@ int main(){
    h.print();
    h.deletefromHeap();
    h.print();
+   h.print();
    
 }
