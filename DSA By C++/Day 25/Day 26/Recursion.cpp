@@ -47,10 +47,18 @@ void fun5(int i,int sum){
     }
     fun5(i-1,sum+i);
 }
+// print sum of n numbers by functional
 int fun6(int n){
  if(n==0)
     return 0;
  return n +  fun6(n-1);   
+}
+
+// print factorial
+int fact(int n){
+ if(n==1)
+  return 1;
+ return n* fact(n-1); 
 }
 int main(){
     int n;
@@ -58,7 +66,8 @@ int main(){
     //  fun1(1,n);
     // fun4(n,n)
     //  fun5(n,0);
-    cout<<fun6(n);
+    // cout<<fun6(n);
+    cout<<fact(n);
 }
 
 
