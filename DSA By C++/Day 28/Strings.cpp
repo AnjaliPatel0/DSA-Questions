@@ -25,8 +25,18 @@ bool isPalindrome(string s){
     return true;
 }
 
+string removeOccurences(string s, string part){
+    while(s.length()>0 && s.find(part)<s.length()){
+        s.erase(s.find(part),part.length());
+    }
+    return s;
+}
 int main(){
     string str = "Ac3?e3c&a";
+    cout<< isPalindrome(str)<<endl;
 
-   cout<< isPalindrome(str);
+    string s = "daabsbaababc";
+    string part="abc";
+    cout<< removeOccurences(s,part);
+
 }
